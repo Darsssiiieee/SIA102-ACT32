@@ -1,0 +1,29 @@
+<body>
+<div class="header">
+	<h1>Activity 32: Angular Library Grid</h1>
+</div>
+<main class="container">
+	<div
+		class="card"
+		*ngFor="let book of books">
+		<img
+			[src]="book.imageUrl"
+			alt="" />
+		<h1>{{ book.name }}</h1>
+		<h2>Written {{ book.director }}</h2>
+		<h2>{{ book.description }}</h2>
+
+		<button
+			class="btn btn--primary"
+			(click)="StartReading()">
+			Start Reading
+		</button>
+
+		<button
+			class="btn btn--secondary"
+			(click)="addToReadinglist()">
+			Add to Reading list
+		</button>
+	</div>
+</main>
+</body>
